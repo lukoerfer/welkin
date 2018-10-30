@@ -1,0 +1,48 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns="http://usefulinc.com/ns/doap#">
+	<Project>
+	<name xml:lang="en-US" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Welkin</name>
+	<homepage rdf:resource="http://simile.mit.edu/welkin/" />
+	<created>2004-10-05</created>
+	<shortdesc xml:lang="en-US" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Welkin is a graph-based RDF visualizer.</shortdesc>
+	<description xml:lang="en-US" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Welkin is a graph-based RDF visualizer.</description>
+
+	<mailing-list rdf:resource="http://simile.mit.edu/mail.html" />
+
+	<maintainer>
+		<foaf:Person>
+			<foaf:name xml:lang="it" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefano Mazzocchi</foaf:name>
+			<foaf:homepage rdf:resource="http://betaversion.org/~stefano/" />
+		</foaf:Person>
+	</maintainer>
+	<maintainer>
+		<foaf:Person>
+			<foaf:name xml:lang="it" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paolo Ciccarese</foaf:name>
+		</foaf:Person>
+	</maintainer>
+
+	<!-- currently supported versions -->
+	<release>
+		<Version>
+			<created>2004-11-09</created>
+			<revision>beta</revision>
+		</Version>
+	</release>
+
+	<license rdf:resource="http://usefulinc.com/doap/licenses/bsd" />
+
+	<repository>
+		<SVNRepository>
+			<location rdf:resource="http://simile.mit.edu/repository/welkin/" />
+			<browse rdf:resource="http://simile.mit.edu/viewsvn/welkin/" />
+		</SVNRepository>
+	</repository>
+
+	<download-page rdf:resource="http://simile.mit.edu/dist/welkin/" />
+	<wiki rdf:resource="http://simile.mit.edu/wiki/" />
+	<bug-database rdf:resource="http://simile.mit.edu/issues/" />
+	<screenshots rdf:resource="http://simile.mit.edu/welkin/guide.html" />
+	<programming-language xml:lang="en-US" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</programming-language>
+</Project>
+</rdf:RDF>

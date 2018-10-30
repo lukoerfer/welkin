@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="http://simile.mit.edu/styles/default.css" type="text/css">
+  <title>SIMILE | Welkin</title>
+  <style>
+     #body {
+        margin-bottom: 220px;
+     }
+     .figure {
+       text-align: center;
+       padding: 20px 0px 20px 0px;
+     }
+    </style>
+  <link rel="meta" title="DOAP" type="application/rdf+xml" href="doap.rdf" />
+</head>
+<body>
+<!--#include virtual="sidebar.html" -->
+<ul id="path">
+  <li><a href="http://simile.mit.edu/" title="Home">SIMILE</a></li>
+  <li><span>Welkin</span></li>
+</ul>
+<div id="body">
+<h1>Welkin</h1>
+<h2>What is this?</h2>
+<p>Welkin is a graph-based <a href="http://www.w3.org/RDF/">RDF</a>
+visualizer.</p>
+<p class="figure"><img src="images/screenshot.png" alt="Welkin Screenshot"/></p>
+<h2>What's New in Version 1.1</h2>
+ <ul>
+  <li>Works on Windows, Linux and MacOSX.</li>
+  <li>Added support for Turtle/N3 RDF syntax.</li>
+  <li>Dramatically reduced size for increased startup performance.</li>
+  <li>Ability to turn on/off and modify link strength for individual predicates.</li>
+  <li>Ability to color code resources.</li>
+  <li>Ability to select and filter nodes directly on their graph-theoretical properties (indegree, outdegree and clustering coefficient).</li>
+  <li>Highlighting works by token sub-selection and not only by full string selection.</li>
+ </ul>
+<h2>Ok, how do I run it?</h2>
+<p>The easiest way is to <a href="http://simile.mit.edu/repository/welkin/latest/docs/welkin.jnlp" title="Run Welkin via Java WebStart">run Welkin thru Java WebStart</a>.</p>
+<p>If the application doesn't start when you click the link above, you don't have Java WebStart installed in your machine. You can get it when you installed the latest version of the Java Runtime Environment from <a href="http://www.java.com/" title="Official Java Web Site">the official Java web site</a>.</p>
+<h2>Cool, now what?</h2>
+<p>Welkin visualizes RDF models. If you want to test it with some data, you can start with <a href="http://simile.mit.edu/repository/welkin/latest/data/" title="Test Data">these graph fragments</a> taken from our digital library collection.</p>
+<p>A word of warning: above 1000 nodes, real-time drawing performance degrades dramatically even on beefy machines. We suggest you not to load more than 1Mb of RDF; if you have more, consider splitting it up for now. In future versions, we'll be targeting ways to allow you to work on much bigger graphs.</p>
+<h2>How can I learn more about it?</h2>
+<p>The best way is to read the <a href="guide.html">Welkin User Guide</a>.</p>
+<h2>Where do I download it?</h2>
+<p>You can obtain Welkin in two different ways:</p>
+<ol>
+  <li>download a <a href="http://simile.mit.edu/dist/welkin/">prepackaged distribution</a></li>
+  <p class="note">On MacOSX only, you can download Welkin as a prepackaged standalone java application. Download the file with a ".dmg" extension.</p>
+  <li>download the files directly from the code repository.</li>
+</ol>
+<p>In case you want to download the files from the repository (for
+example, if you want to have the latest and greatest development
+snapshot), you need to have a <a href="http://subversion.tigris.org/">Subversion</a>
+client installed. At this point, just type</p>
+<pre>svn co http://simile.mit.edu/repository/welkin/trunk/ welkin</pre>
+<p>at the command line and the latest welkin distribution will appear
+in the "welkin" directory.</p>
+<h2>Licensing and legal issues</h2>
+<p>Welkin is open source software and is licensed under the BSD
+license located in the LICENSE.txt file located in the root of the
+distribution.</p>
+<p>Note however, that this software ships with libraries that are not
+released under the same license, that we are redistributing them
+untouched and each of them are licensed according to the terms of the
+license files located in the ./legal subdirectory of the distribution.</p>
+<h2>Credits</h2>
+<p>This software was created by the SIMILE project and originally
+written by:</p>
+<ul>
+  <li><a href="http://www.betaversion.org/~stefano/">Stefano Mazzocchi</a>
+&lt;stefanom at mit.edu&gt;</li>
+  <li><a href="http://www.labmedinfo.org/people/cv/ciccarese.htm">Paolo Ciccarese</a>
+&lt;paolo at hcklab.org&gt;</li>
+</ul>
+</div>
+<!--#include virtual="../footer.html" -->
+</body>
+</html>

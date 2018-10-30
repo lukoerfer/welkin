@@ -1,0 +1,71 @@
+
+                    +--------------------------------------+
+                    |           Welkin ToDo List           |
+                    +--------------------------------------+
+
+
+
+known bugs and limitations
+==========================
+
+ - graph layout algorithm is a brute force n-body, with algorithmical complexity
+   of O(n^2), with n the number of nodes. There are algorithms that achieve at
+   least O(n*log(n)) complexity, but they require a b-tree creation. We need to 
+   investigate at how many nodes the nlog(n) algorithm starts to make sense and
+   whether or not this is actually useful in real life due to data pollution.
+   
+ - all panes should work in concert. When you restrict the graph from one pane,
+   all the others should update at the same time.
+ 
+ - there is no 'usability degradation' control: welkin will not stop users from 
+   loading an eccessive amount of information that would make the system too 
+   slow to be responsive. we must think about ways to prevent this from 
+   happening as usability should always be good.
+
+ - long literals are not fragmented and flowed in nice text boxes.
+ 
+ - hue color sliders are lame, we need to find a better method for color coding
+   that would make it easier for users to select colors that have a cognitively
+   similar level of contrast. (see the NASA usability lab color tool for an
+   example of that).
+ 
+ - fish-eye focusing looks sexy but might not be that effective in real life,
+   maybe semantic zooming/panning would be more helpful? or combining the
+   approaches? in case, when doing the fisheye zoom, we should make sure that
+   things don't fall off the edge of the graph and get cropped.
+    
+ - add the ability to filter by type
+
+
+in the queue (and in no particular order)
+=========================================
+
+ - allow models to be loaded from a URL (a web-browser-like address bar at the 
+   top would be handy) or from a SPARQL web service.
+
+ - add provenance info to the graph model (basically, being able to distinguish
+   groups of nodes by where [what file, what web service] they came from)
+   
+ - allow the current model + current layout to be saved for later reuse.
+ 
+ - play with clustering algorithms as a way to simplify the graph when it 
+   contains too many nodes (Newmann-Girman is very promising, but it's 
+   algorithmical complexity may be somewhat limiting and clearly not realtime, 
+   but maybe we can reuse some of the force-repulsion simulation to perform the 
+   clustering incrementally)
+   
+   
+   
+              ===================== WARNING =========================
+              
+   We are perfectly aware that graph-based layouts are not meant to be for 
+   general users (ie. our grandmas) and exhibit a very low efficiency in 
+   finding individual items. Welkin is not a browser you use to get to the 
+   single item, but more one that you want to use when you have no idea about 
+   the data you are looking at. Sort of a "data telescope" if you wish, where 
+   the clusters are more important than the single nodes. So, no, we don't
+   consider this a bug or a limitation, even if we do keep data pollution and
+   clutter minimization a priority in our UI research.
+   
+            ==========================================================
+

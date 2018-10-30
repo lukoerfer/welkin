@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+     <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+     <!ENTITY rdf_ 'http://hcklab.org/ontology/support/language_and_countries/'>
+     <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+     xmlns:rdf_="&rdf_;"
+     xmlns:rdfs="&rdfs;">
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_0"
+     rdf_:has_code="bg"
+     rdf_:has_name="Bulgarian"
+     rdfs:label="ISO_639   bg">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10000"
+     rdf_:has_code="nl"
+     rdf_:has_name="Dutch"
+     rdfs:label="ISO_639   nl">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10001"
+     rdf_:has_code="en"
+     rdf_:has_name="English"
+     rdfs:label="ISO_639   en">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10002"
+     rdf_:has_code="et"
+     rdf_:has_name="Estonian"
+     rdfs:label="ISO_639   et">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10003"
+     rdf_:has_code="fr"
+     rdf_:has_name="French"
+     rdfs:label="ISO_639   fr">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10004"
+     rdf_:has_code="de"
+     rdf_:has_name="German"
+     rdfs:label="ISO_639   de">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10005"
+     rdf_:has_code="hu"
+     rdf_:has_name="Hungarian"
+     rdfs:label="ISO_639   hu">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10006"
+     rdf_:has_code="it"
+     rdf_:has_name="Italian"
+     rdfs:label="ISO_639   it">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10007"
+     rdf_:has_code="lt"
+     rdf_:has_name="Lithuanian"
+     rdfs:label="ISO_639   lt">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10008"
+     rdf_:has_code="mo"
+     rdf_:has_name="Moldavian"
+     rdfs:label="ISO_639   mo">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10009"
+     rdf_:has_code="no"
+     rdf_:has_name="Norwegian"
+     rdfs:label="ISO_639   no">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10010"
+     rdf_:has_code="pl"
+     rdf_:has_name="Polish"
+     rdfs:label="ISO_639   pl">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10011"
+     rdf_:has_code="pt"
+     rdf_:has_name="Portuguese"
+     rdfs:label="ISO_639   pt">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10012"
+     rdf_:has_code="ro"
+     rdf_:has_name="Romanian"
+     rdfs:label="ISO_639   ro">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10013"
+     rdf_:has_code="ru"
+     rdf_:has_name="Russian"
+     rdfs:label="ISO_639   ru">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10014"
+     rdf_:has_code="sr"
+     rdf_:has_name="Serbian"
+     rdfs:label="ISO_639   sr">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10015"
+     rdf_:has_code="sl"
+     rdf_:has_name="Slovenian"
+     rdfs:label="ISO_639   sl">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10016"
+     rdf_:has_code="es"
+     rdf_:has_name="Spanish"
+     rdfs:label="ISO_639   es">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10017"
+     rdf_:has_code="sv"
+     rdf_:has_name="Swedish"
+     rdfs:label="ISO_639   sv">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_10018"
+     rdf_:has_code="uk"
+     rdf_:has_name="Ukranian"
+     rdfs:label="ISO_639   uk">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Element>
+<rdf_:Organization rdf:about="&rdf_;hck-onto-support_Instance_49"
+     rdf_:has_name="ISO"
+     rdfs:label="ISO">
+    <rdf_:has_description>The International Organization for Standardization is a worldwide federation of national standards bodies (ISO member bodies). The work of preparing International Standards is normally carried out though ISO technical committees. Each member body interested in a subject for which a technical committee has been established has the right to be represented on that committee. International organizations, governmental and non-governmental, in liaison with ISO, also take part in the work. ISO collaborates closely with the International Electrotechnical Commission (IEC) on all matters of electrotechnical standardization.</rdf_:has_description>
+    <rdf_:has_defined rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+    <rdf_:has_defined rdf:resource="&rdf_;hck-onto-support_Instance_61"/>
+</rdf_:Organization>
+<rdf_:Standard_Coding rdf:about="&rdf_;hck-onto-support_Instance_60"
+     rdf_:code_label="Country Code"
+     rdf_:has_description="Country Names"
+     rdf_:has_name="ISO_3166"
+     rdf_:name_label="Country Name"
+     rdfs:label="ISO_3166">
+    <rdf_:defined_by rdf:resource="&rdf_;hck-onto-support_Instance_49"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_63"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_64"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_65"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_66"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_67"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_68"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_69"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_70"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_71"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_72"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_73"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_75"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_76"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_77"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_78"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_79"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_80"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_81"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_82"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_83"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_84"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_85"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_86"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_87"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_88"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_89"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_90"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_91"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_92"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_93"/>
+</rdf_:Standard_Coding>
+<rdf_:Standard_Coding rdf:about="&rdf_;hck-onto-support_Instance_61"
+     rdf_:code_label="Language Code"
+     rdf_:has_description="Codes for the Representation of Names of Languages"
+     rdf_:has_name="ISO_639"
+     rdf_:name_label="Language Name"
+     rdfs:label="ISO_639">
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_0"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10000"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10001"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10002"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10003"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10004"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10005"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10006"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10007"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10008"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10009"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10010"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10011"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10012"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10013"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10014"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10015"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10016"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10017"/>
+    <rdf_:holds rdf:resource="&rdf_;hck-onto-support_Instance_10018"/>
+    <rdf_:defined_by rdf:resource="&rdf_;hck-onto-support_Instance_49"/>
+</rdf_:Standard_Coding>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_63"
+     rdf_:has_code="at"
+     rdf_:has_name="Austria"
+     rdfs:label="ISO_3166   at">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_64"
+     rdf_:has_code="au"
+     rdf_:has_name="Australia"
+     rdfs:label="ISO_3166   au">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_65"
+     rdf_:has_code="be"
+     rdf_:has_name="Belgium"
+     rdfs:label="ISO_3166   be">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_66"
+     rdf_:has_code="ca"
+     rdf_:has_name="Canada"
+     rdfs:label="ISO_3166   ca">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_67"
+     rdf_:has_code="ch"
+     rdf_:has_name="Switzerland"
+     rdfs:label="ISO_3166   ch">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_68"
+     rdf_:has_code="cz"
+     rdf_:has_name="Czech Republic"
+     rdfs:label="ISO_3166   cz">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_69"
+     rdf_:has_code="de"
+     rdf_:has_name="Germany"
+     rdfs:label="ISO_3166   de">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_70"
+     rdf_:has_code="dk"
+     rdf_:has_name="Denmark"
+     rdfs:label="ISO_3166   dk">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_71"
+     rdf_:has_code="ee"
+     rdf_:has_name="Estonia"
+     rdfs:label="ISO_3166   ee">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_72"
+     rdf_:has_code="es"
+     rdf_:has_name="Spain"
+     rdfs:label="ISO_3166   es">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_73"
+     rdf_:has_code="fi"
+     rdf_:has_name="Finland"
+     rdfs:label="ISO_3166   fi">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_75"
+     rdf_:has_code="fr"
+     rdf_:has_name="France"
+     rdfs:label="ISO_3166   fr">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_76"
+     rdf_:has_code="gb"
+     rdf_:has_name="United Kingdom"
+     rdfs:label="ISO_3166   gb">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_77"
+     rdf_:has_code="gr"
+     rdf_:has_name="Greece"
+     rdfs:label="ISO_3166   gr">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_78"
+     rdf_:has_code="hr"
+     rdf_:has_name="Croatia"
+     rdfs:label="ISO_3166   hr">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_79"
+     rdf_:has_code="ie"
+     rdf_:has_name="Ireland"
+     rdfs:label="ISO_3166   ie">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_80"
+     rdf_:has_code="il"
+     rdf_:has_name="Israel"
+     rdfs:label="ISO_3166   il">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_81"
+     rdf_:has_code="it"
+     rdf_:has_name="Italy"
+     rdfs:label="ISO_3166   it">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_82"
+     rdf_:has_code="li"
+     rdf_:has_name="Liechtenstein"
+     rdfs:label="ISO_3166   li">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_83"
+     rdf_:has_code="lt"
+     rdf_:has_name="Lithuania"
+     rdfs:label="ISO_3166   lt">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_84"
+     rdf_:has_code="mc"
+     rdf_:has_name="Monaco"
+     rdfs:label="ISO_3166   mc">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_85"
+     rdf_:has_code="mt"
+     rdf_:has_name="Malta"
+     rdfs:label="ISO_3166   mt">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_86"
+     rdf_:has_code="pl"
+     rdf_:has_name="Poland"
+     rdfs:label="ISO_3166   pl">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_87"
+     rdf_:has_code="ro"
+     rdf_:has_name="Romania"
+     rdfs:label="ISO_3166   ro">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_88"
+     rdf_:has_code="ru"
+     rdf_:has_name="Russian Republic"
+     rdfs:label="ISO_3166   ru">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_89"
+     rdf_:has_code="se"
+     rdf_:has_name="Sweden"
+     rdfs:label="ISO_3166   se">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_90"
+     rdf_:has_code="si"
+     rdf_:has_name="Slovenia"
+     rdfs:label="ISO_3166   si">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_91"
+     rdf_:has_code="sm"
+     rdf_:has_name="San Marino"
+     rdfs:label="ISO_3166   sm">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_92"
+     rdf_:has_code="us"
+     rdf_:has_name="United States"
+     rdfs:label="ISO_3166   us">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+<rdf_:Element rdf:about="&rdf_;hck-onto-support_Instance_93"
+     rdf_:has_code="yu"
+     rdf_:has_name="Yugoslavia"
+     rdfs:label="ISO_3166   yu">
+    <rdf_:belongs_to rdf:resource="&rdf_;hck-onto-support_Instance_60"/>
+</rdf_:Element>
+</rdf:RDF>

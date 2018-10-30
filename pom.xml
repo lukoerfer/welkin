@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.mit.simile</groupId>
+  <artifactId>welkin</artifactId>
+  <name>SIMILE Welkin</name>
+  <version>1.2-SNAPSHOT</version>
+  <description>Welkin is a graph-based RDF visualizer.</description> 
+  <url>http://simile.mit.edu/welkin/</url>
+  <inceptionYear>2004</inceptionYear>
+
+  <issueManagement>
+    <system>jira</system>
+    <url>http://simile.mit.edu/issues/browse/WELKIN</url>
+  </issueManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>simile.mit.edu</id>
+      <url>scpexe://simile.mit.edu/var/maven</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:svn:http://simile.mit.edu/repository/welkin/trunk/</connection>
+    <developerConnection>scm:svn:http://simile.mit.edu/repository/welkin/trunk/</developerConnection>
+    <url>http://simile.mit.edu/viewsvn/welkin/trunk/</url>
+  </scm>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+        <includes>
+          <include>**/*.png</include>
+          <include>**/*.gif</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>    
+      <plugin>
+        <inherited>true</inherited>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <configuration>
+              <downloadSources>true</downloadSources>
+          </configuration>
+      </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-jar-plugin</artifactId>
+         <configuration>
+           <archive>
+             <manifest>
+               <mainClass>edu.mit.simile.welkin.Welkin</mainClass>
+               <addClasspath>true</addClasspath>
+             </manifest>
+           </archive>
+         </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>edu.mit.simile.welkin.Welkin</mainClass>
+            </manifest>
+          </archive>
+          <finalName>welkin</finalName>
+          <!--appendAssemblyId>false</appendAssemblyId-->
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attached</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-property</id>
+            <phase>package</phase>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireProperty>
+                  <property>keypass</property>
+                  <message>"Include -Dkeypass= for packaging"</message>
+                </requireProperty>
+             </rules>
+            <fail>true</fail>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>webstart-maven-plugin</artifactId>
+        <configuration>
+          <libPath>lib</libPath>
+          <jnlp>
+            <outputFile>welkin.jnlp</outputFile>
+            <mainClass>edu.mit.simile.welkin.Welkin</mainClass>
+          </jnlp>
+          <sign>
+            <keystore>file://${project.build.directory}/../.keystore</keystore>
+            <keypass>${keypass}</keypass>
+            <storepass>${keypass}</storepass>
+            <alias>welkin</alias>
+            <verify>true</verify>
+          </sign>
+          <keystoreConfig>
+            <delete>false</delete>
+            <gen>false</gen>
+          </keystoreConfig>
+          <pack200>false</pack200>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jnlp</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>replace-tokens</id>
+            <phase>process-sources</phase>
+            <configuration>
+              <tasks>
+                <tstamp>
+                  <format property="timestamp" pattern="yyyy"/>
+                </tstamp>
+                <replaceregexp>
+                  <regexp pattern="@year@"/>
+                  <substitution expression="${timestamp}"/>
+                  <fileset dir="src/main/resources" includes="**/*.properties"/>
+                </replaceregexp>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>prepare-dist</id>
+            <phase>package</phase>
+            <configuration>
+              <tasks>
+                <property file="${user.home}/welkin.build.properties"/>
+                <property file="local.build.properties"/>
+                <property file="build.properties"/>
+                <mkdir dir="${dist}"/>
+                <copy todir="${dist}" filtering="on">
+                  <fileset dir="${basedir}">
+                    <include name="*.txt"/>
+                    <include name="*.xml"/>
+                    <include name="*.properties"/>
+                    <include name="*.sh"/>
+                    <include name="*.bat"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${lib}" filtering="off">
+                  <fileset dir="${project.build.directory}/jnlp">
+                    <include name="*.jar"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${dist}/${lib}" filtering="off">
+                  <fileset dir="${lib}">
+                    <include name="*.jar"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${docs}" filtering="off">
+                  <fileset dir="${project.build.directory}/jnlp">
+                    <include name="*.jnlp"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${dist}/${src}" filtering="on">
+                  <fileset dir="${src}">
+                    <exclude name="**/*.jpg"/>
+                    <exclude name="**/*.gif"/>
+                    <exclude name="**/*.png"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${dist}/${src}" filtering="off">
+                  <fileset dir="${src}">
+                    <include name="**/*.jpg"/>
+                    <include name="**/*.gif"/>
+                    <include name="**/*.png"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${dist}/${docs}" filtering="on">
+                  <fileset dir="${docs}">
+                    <exclude name="**/*.jpg"/>
+                    <exclude name="**/*.gif"/>
+                    <exclude name="**/*.png"/>
+                    <exclude name="index.html"/>
+                  </fileset>
+                </copy>
+
+                <copy todir="${dist}/${docs}" filtering="off">
+                  <fileset dir="${docs}">
+                    <include name="**/*.jpg"/>
+                    <include name="**/*.gif"/>
+                    <include name="**/*.png"/>
+                  </fileset>
+                </copy>
+
+                <chmod file="${dist}/welkin.sh" perm="+x"/>
+
+                <fixcrlf srcdir="${dist}" includes="*.sh" eol="lf"/>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>dist</id>
+            <phase>package</phase>
+            <configuration>
+              <tasks>
+                <property file="${user.home}/welkin.build.properties"/>
+                <property file="local.build.properties"/>
+                <property file="build.properties"/>
+                <zip zipfile="${dist.target}/${dist.name}.zip" basedir="${dist}"/>
+                <tar tarfile="${dist.target}/${dist.name}.tar" longfile="gnu">
+                  <tarfileset dir="${dist.root}">
+                    <include name="${dist.name}/**"/>
+                    <exclude name="${dist.name}/welkin.sh"/>
+                  </tarfileset>
+                  <tarfileset dir="${dist.root}" mode="755">
+                    <include name="${dist.name}/welkin.sh"/>
+                  </tarfileset>
+                </tar>
+                <gzip zipfile="${dist.target}/${dist.name}.tar.gz" src="${dist.target}/${dist.name}.tar"/>
+                <delete file="${dist.target}/${dist.name}.tar"/>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>mac-dist</id>
+            <phase>package</phase>
+            <configuration>
+              <tasks>
+                <property file="${user.home}/welkin.build.properties"/>
+                <property file="local.build.properties"/>
+                <property file="build.properties"/>
+                <taskdef name="jarbundler" 
+                   classpath="${tools}/jarbundler-1.4.jar"
+                   classname="com.loomcom.ant.tasks.jarbundler.JarBundler" />
+                <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+                <condition property="do.macos">
+                  <and>
+                    <os family="mac"/>
+                    <os family="unix"/>
+                  </and>
+                </condition>
+
+                <if>
+                  <istrue value="${do.macos}"/>
+                  <then>
+                    <echo message="Mac OS X environment, building dmg distribution."/>
+
+                    <delete dir="${dist.target}/Welkin.app" quiet="true"/>
+
+                    <jarbundler dir="${dist.target}"
+                            name="Welkin"
+                            mainclass="edu.mit.simile.welkin.Welkin" 
+                            icon="${misc}/welkin.icns"
+                            version="${version}"
+                            infostring="${Name} ${version}"
+                            aboutmenuname="Welkin"
+                            jvmversion="1.5+"
+                            bundleid="edu.mit.simile.welkin.Welkin"
+                            vmoptions="-Xmx128m"
+                            smalltabs="true"
+                            antialiasedgraphics="true"
+                            antialiasedtext="true"
+                            liveresize="true"
+                            growboxintrudes="true"
+                            screenmenu="true">
+                      <jarfileset dir="${lib}">
+                        <exclude name="**/.svn" />
+                        <include name="**/*.jar" />
+                      </jarfileset>
+                    </jarbundler>
+       
+                    <exec executable="tools/makeDMG.sh" os="Mac OS X">
+                      <arg line="${version}"/>
+                    </exec>
+                  </then>
+                  <else>
+                    <echo message="Not in Mac OS X environment, will not build dmg distribution."/>
+                  </else>
+                </if>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>remove-dist</id>
+            <phase>clean</phase>
+            <configuration>
+              <tasks>
+                <delete dir="dist"/>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>ant</groupId>
+            <artifactId>ant-nodeps</artifactId>
+            <version>1.6.5</version>
+          </dependency>
+          <dependency>
+            <groupId>ant-contrib</groupId>
+            <artifactId>ant-contrib</artifactId>
+            <version>1.0b2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+      <id>aduna-repo</id>
+      <name>Aduna Repository</name>
+      <url>http://repository.aduna-software.org/maven2</url>
+    </repository>
+    <repository>
+      <id>simile.mit.edu</id>
+      <url>http://simile.mit.edu/maven-proxy</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.openrdf</groupId>
+      <artifactId>openrdf-model</artifactId>
+      <version>2.0-beta6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openrdf</groupId>
+      <artifactId>openrdf-rio-api</artifactId>
+      <version>2.0-beta6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openrdf</groupId>
+      <artifactId>openrdf-rio-rdfxml</artifactId>
+      <version>2.0-beta6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openrdf</groupId>
+      <artifactId>openrdf-rio-turtle</artifactId>
+      <version>2.0-beta6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.3.0</version>
+    </dependency>   
+  </dependencies>
+</project>
