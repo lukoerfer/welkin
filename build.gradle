@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'de.lukaskoerfer'
-version = 1.2
+version = '1.2'
 
 mainClassName = 'edu.mit.simile.welkin.Welkin'
 
@@ -16,7 +16,6 @@ repositories {
 }
 
 dependencies {
-    // implementation fileTree('lib').include('**/*.jar')
     implementation 'org.openrdf.sesame:sesame-model:2.1'
     implementation 'org.openrdf.sesame:sesame-rio-api:2.1'
     implementation 'org.openrdf.sesame:sesame-rio-rdfxml:2.1'
@@ -25,5 +24,5 @@ dependencies {
 }
 
 wrapper {
-    gradleVersion = 4.6
+    gradleVersion = '4.6'
 }
