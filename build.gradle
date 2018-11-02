@@ -1,0 +1,29 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+group = 'de.lukaskoerfer'
+version = 1.2
+
+mainClassName = 'edu.mit.simile.welkin.Welkin'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://www.mygrid.org.uk/maven/repository/'
+    }
+}
+
+dependencies {
+    // implementation fileTree('lib').include('**/*.jar')
+    implementation 'org.openrdf.sesame:sesame-model:2.1'
+    implementation 'org.openrdf.sesame:sesame-rio-api:2.1'
+    implementation 'org.openrdf.sesame:sesame-rio-rdfxml:2.1'
+    implementation 'org.openrdf.sesame:sesame-rio-turtle:2.1'
+    implementation 'org.slf4j:slf4j-simple:1.3.0'
+}
+
+wrapper {
+    gradleVersion = 4.6
+}
